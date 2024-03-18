@@ -2,14 +2,16 @@ import express from 'express';
 import mongoose from 'mongoose';
 import messageRouter from './routes/message.route.js'
 import path from 'path';
-mongoose.connect("mongodb+srv://sobran0054:rajak0054@painter.it6lakm.mongodb.net/?retryWrites=true&w=majority&appName=painter")
+mongoose.connect("mongodb+srv://sobran0054:rajak0054@painter.it6lakm.mongodb.net/?retryWrites=true&w=majority")
         .then(()=>{
             console.log("connected to mongodb!!");
         })
         .catch((err)=>{
             console.log(err);
         })
+
         const __dirname = path.resolve();
+        
 const app=express();
 app.use(express.json());
 app.listen(3000,()=>{
